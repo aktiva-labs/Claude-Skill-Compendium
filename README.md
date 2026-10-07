@@ -2,7 +2,7 @@
 
 Repositorio de skills de terceros, versionadas aquí para usarlas en sesiones de Claude en la nube (sin depender de instalar plugins en cada sesión).
 
-Cada carpeta de primer nivel es **una fuente upstream**, copiada tal cual (sin `.git`) con su licencia. Las skills viven en `skills/*/SKILL.md` (o en `SKILL.md` en la raíz si la fuente es una sola skill).
+Cada carpeta de primer nivel es **una fuente upstream**, reducida a lo que usa el agente: las skills (`SKILL.md` + sus archivos de apoyo) y la `LICENSE`. Sin READMEs, tests, CI ni manifiestos de plugin. Las skills viven en `skills/*/SKILL.md` (o en `SKILL.md` en la raíz si la fuente es una sola skill).
 
 ## Estructura por categoría
 
@@ -50,4 +50,4 @@ Cada carpeta de primer nivel es **una fuente upstream**, copiada tal cual (sin `
 
 ## Actualizar
 
-Volver a clonar la fuente (`git clone --depth 1`) y reemplazar la carpeta correspondiente, sin el `.git`. Cada carpeta conserva la licencia de su origen.
+Volver a clonar la fuente (`git clone --depth 1`) y reemplazar la carpeta correspondiente, dejando solo las skills y la licencia (en `addyosmani-agent-skills/` también `references/`, que las skills enlazan). Cada carpeta conserva la licencia de su origen.
